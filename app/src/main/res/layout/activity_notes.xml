@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FDF6F0">
+
+    <!-- TOP HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- LEFT SIDE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/greetingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oh, Hi User!"
+                android:textColor="#A26769"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/totalNotesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚 Total Notes: 0"
+                android:textColor="#6D4C4C"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- MENU BUTTON -->
+        <ImageButton
+            android:id="@+id/menuBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:background="@android:color/transparent"
+            android:tint="#A26769"/>
+    </LinearLayout>
+
+    <!-- DROPDOWN -->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_gravity="end"
+        android:background="#F4E4E4"
+        android:padding="10dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/profileBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D8A7A7"/>
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#A26769"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- SEARCH -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search notes..."
+        android:backgroundTint="#A26769"
+        android:layout_marginTop="12dp"/>
+
+    <!-- EMPTY TEXT -->
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No notes yet..."
+        android:textColor="#888888"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- NOTES LIST -->
+    <ListView
+        android:id="@+id/notesList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"/>
+
+    <!-- ADD BUTTON -->
+    <Button
+        android:id="@+id/addNoteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ New Note"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#A26769"/>
+</LinearLayout>

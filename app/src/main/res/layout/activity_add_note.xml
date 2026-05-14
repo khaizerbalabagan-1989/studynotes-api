@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FDF6F0"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- SCREEN TITLE -->
+    <TextView
+        android:text="New Note"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#A26769"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- TITLE -->
+    <EditText
+        android:id="@+id/title"
+        android:hint="Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#6D4C4C"
+        android:textColorHint="#999999"
+        android:backgroundTint="#A26769"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- CONTENT -->
+    <EditText
+        android:id="@+id/content"
+        android:hint="Write your thoughts here..."
+        android:textColor="#000000"
+        android:textColorHint="#888888"
+        android:textSize="16sp"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:padding="12dp"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#A26769"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- SAVE -->
+    <Button
+        android:id="@+id/saveNoteBtn"
+        android:text="Save Note"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#A26769"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- DELETE -->
+    <Button
+        android:id="@+id/deleteBtn"
+        android:text="Delete Note"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#D8A7A7"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
